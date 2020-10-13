@@ -11,6 +11,10 @@ const books = [
   }
 ];
 
-const getTheTitles = () => {};
+const getTheTitles = (elements) => {
+  let titles = [];
+  elements.forEach(book => titles.push(book.title));
+  return titles;
+};
 
 console.log(getTheTitles(books)); // Expected output: ['4 hour work week', 'Tools of Titans']

@@ -9,6 +9,9 @@
  * vowels('Hello there!') === 4
  */
 
-function vowels(s: string) {}
+function vowels(s: string): number {
+    var m = s.match(/[aeiou]/gi);
+    return m == null ? 0 : m.length;
+}
 
 export { vowels };
