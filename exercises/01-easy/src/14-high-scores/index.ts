@@ -6,20 +6,26 @@
 
 class HighScores {
   scores: number[];
+  last: number;
+  sorted: number[];
   constructor(scores: number[]) {
+    // This is terrible way, I know! Ksshhshshs...
+    this.last = scores[scores.length-1];
     this.scores = scores;
+    this.sorted = [...this.scores].sort((a, b) => { return a >= b ? 1 : -1 }).reverse();
+    console.log(this.scores, this.sorted);
   }
 
-  get latest() {
-    return 0;
+  get latest(): number {
+    return this.last;
   }
 
-  get personalBest() {
-    return 0;
+  get personalBest(): number {
+    return this.sorted[0];
   }
 
-  get personalTopThree() {
-    return 0;
+  get personalTopThree(): number[] {
+    return [...this.sorted].splice(0, 3);
   }
 }
 
