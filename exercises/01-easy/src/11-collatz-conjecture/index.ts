@@ -23,11 +23,11 @@
  */
 
 function steps(n: number): number {
-    if(n < 0) throw new Error("Only positive numbers are allowed");
+    if(n <= 0) throw new Error("Only positive numbers are allowed");
     let stepCount = 0;
-    while(n !== 1) {
+    while(n !== 1) { // Ooof, dangerous
         if(n % 2 === 0) {
-            n / 2;
+            n /= 2;
         } else {
             n = n * 3 + 1;
         }
