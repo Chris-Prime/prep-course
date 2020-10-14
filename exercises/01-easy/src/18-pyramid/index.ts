@@ -14,8 +14,20 @@
  * pyramid(3) = '  #  '
  *              ' ### '
  *              '#####'
+ * 
+ * pyramid(4) = '   #   '
+ *              '  ###  '
+ *              ' ##### '
+ *              '#######'
  */
 
-function pyramid(n: number) {}
+function pyramid(n: number): void {
+    var width = n * 2 - 1;
+    for(var level = 0; level < n; level++) {
+        var floor: string = "#".repeat(level * 2) + "#";
+        var space: string = ' '.repeat((width - floor.length) / 2);
+        console.log(space + floor + space);
+    }
+}
 
 export { pyramid };
