@@ -4,19 +4,19 @@ function add(a:number, b:number): number {
     return a + b;
 }
 
-function subtract(a:number, b:number) {
+function subtract(a:number, b:number): number {
     return a - b;
 }
 
-function sum(values:number[]) {
-    values.reduce((a, b) => a + b, 0);
+function sum(values:number[]): number {
+    return values.reduce((a, b) => a + b, 0);
 }
 
-function multiply(values:number[]) {
-    values.reduce((a, b) => a * b, 0);
+function multiply(values:number[]): number {
+    return values.reduce((a, b) => a * b, 0);
 }
 
-function power(a:number, power:number) {
+function power(a:number, power:number): number {
     return Math.pow(a, power);
 }
 
