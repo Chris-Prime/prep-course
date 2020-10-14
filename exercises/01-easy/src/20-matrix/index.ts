@@ -35,14 +35,33 @@
  */
 
 class Matrix {
-  constructor(private matrix: string) {}
+  data: Array<Array<number>>;
+
+  constructor(private matrix: string) {
+    let rows: Array<Array<number>> = [];
+    matrix.split("\n").forEach((value, key) => {
+      rows[key] = [];
+      value.split(' ').forEach(v => rows[key].push(+v));
+    });
+
+    this.data = rows;
+  }
 
   get rows() {
-    return [];
+    return this.data;
   }
 
   get columns() {
-    return [];
+    let data: Array<Array<number>> = [];
+
+    for(var x = 0; x < this.data.length; x++) {
+      for(var y = 0; y < this.data[x].length; y++) {
+        if(data[y] === undefined) data[y] = [];
+        data[y][x] = this.data[x][y];
+      }
+    }
+
+    return data;
   }
 }
 
