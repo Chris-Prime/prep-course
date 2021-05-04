@@ -1,8 +1,7 @@
 export {};
 
-function getNumber() {
+function getNumber():number {
   return Math.random() * 10;
 }
 
-const result = null; // call the function created above and put the result inside the variable
-console.log(result); // Expected output: {random number}
+console.log(getNumber()); // Expected output: {random number}

@@ -1,8 +1,8 @@
 export {};
 
-const isHappy = "true";
+const isHappy = false;
 
-if (isHappy == false) {
+if (!isHappy) {
   console.log("I am happy");
 } else {
   console.log("I am not happy");
